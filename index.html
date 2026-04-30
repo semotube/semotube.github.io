@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>나의 앨범 · A Life in Photographs</title>
+<title>나의 앨범 · One Breath, One Life</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,12 +26,12 @@
 
 <style>
   :root {
-    /* 따뜻한 노을 톤 다크 베이스 — 자줏빛이 살짝 도는 깊은 마룬 */
-    --bg-0: oklch(0.14 0.025 25);
-    --bg-1: oklch(0.18 0.035 30);
-    --accent-1: oklch(0.74 0.18 40);
-    --accent-2: oklch(0.72 0.17 15);
-    --accent-3: oklch(0.74 0.16 340);
+    /* 심해 다크 베이스 — 깊은 청남 */
+    --bg-0: oklch(0.13 0.035 245);
+    --bg-1: oklch(0.18 0.045 240);
+    --accent-1: oklch(0.62 0.16 220);
+    --accent-2: oklch(0.50 0.18 250);
+    --accent-3: oklch(0.58 0.16 195);
     color-scheme: dark;
   }
   html, body { background: var(--bg-0); }
@@ -39,9 +39,9 @@
     font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     background:
-      radial-gradient(at 18% -8%, oklch(0.30 0.10 35) 0%, transparent 55%),
-      radial-gradient(at 110% 20%, oklch(0.26 0.10 350) 0%, transparent 50%),
-      radial-gradient(at 50% 110%, oklch(0.22 0.08 20) 0%, transparent 55%),
+      radial-gradient(at 14% -10%, oklch(0.28 0.10 220) 0%, transparent 55%),
+      radial-gradient(at 110% 18%, oklch(0.24 0.10 250) 0%, transparent 50%),
+      radial-gradient(at 50% 110%, oklch(0.18 0.07 235) 0%, transparent 55%),
       var(--bg-0);
     background-attachment: fixed;
     min-height: 100vh;
@@ -66,16 +66,16 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<script src="data.js?v=2"></script>
+<script src="data.js?v=4"></script>
 
 <script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="app.jsx?v=2"></script>
+<script type="text/babel" src="app.jsx?v=4"></script>
 
 <script type="text/babel">
   const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-    "blur": 18,
-    "alpha": 0.08,
-    "accent": "sunset"
+    "blur": 11,
+    "alpha": 0.02,
+    "accent": "abyss"
   }/*EDITMODE-END*/;
 
   function Root() {
@@ -98,16 +98,16 @@
             value={Math.round(tweaks.alpha * 100)}
             onChange={(v) => setTweak('alpha', v / 100)}
           />
-          <TweakSection label="노을 톤" />
+          <TweakSection label="바다 톤" />
           <TweakRadio
             label="액센트"
             value={tweaks.accent}
             onChange={(v) => setTweak('accent', v)}
             options={[
-              { value: 'sunset', label: '노을' },
-              { value: 'peach',  label: '복숭아' },
-              { value: 'coral',  label: '산호' },
-              { value: 'golden', label: '황금' },
+              { value: 'abyss',    label: '심해' },
+              { value: 'lagoon',   label: '라군' },
+              { value: 'twilight', label: '황혼' },
+              { value: 'aurora',   label: '오로라' },
             ]}
           />
         </TweaksPanel>
