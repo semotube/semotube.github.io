@@ -268,6 +268,10 @@
           ["호미곶 — 새해 첫 다이빙", "포항", "2026.01", "다이빙"],
           ["수온 11°C — 후드 착용", "포항", "2026.01", "장비"],
           ["일출과 함께", "포항", "2026.01", "일상"],
+          { type: "photo", src: "photos/2025/몰디브/IMG_5374.PNG", poster: "포스터ppp",
+            caption: "이미지 테스트", location: "보홀ppppp", date: "2026.05", tag: "테스트" },
+          { type: "video", src: "videos/2025/몰디브/264.mp4", poster: "포스터vvv",
+            caption: "비디오 테스트", location: "보홀vvvv", date: "2026.05", tag: "테스트" },
         ]),
         SECT("robo-v1", "로보 v1 — 다음 단계",
           "더 작고, 더 조용하게.", [
