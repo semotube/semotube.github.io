@@ -57,6 +57,8 @@
           ["라인 다이빙 — 12m", "보홀", "2018.10", "다이빙"],
           ["FIM 첫 시도", "보홀", "2018.10", "다이빙"],
           ["AIDA 2 인증서", "보홀", "2018.10", "기록"],
+          { type: "photo", src: "photos/2025/몰디브/IMG_5374.PNG", poster: "",
+            caption: "첫 바다 — 12m 영상", location: "보홀", date: "2018.10", tag: "다이빙" },
           { type: "video", src: "", poster: "",
             caption: "첫 바다 — 12m 영상", location: "보홀", date: "2018.10", tag: "다이빙" },
         ]),
