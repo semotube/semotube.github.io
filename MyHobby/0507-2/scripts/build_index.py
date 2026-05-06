@@ -86,7 +86,7 @@ def scan(folder: Path, meta: dict, hobby: str) -> list[dict]:
         return []
 
     files = sorted(p for p in folder.iterdir() if p.is_file() and not p.name.startswith("."))
-    # 비디오 썸네일로 사용되는 .jpg 는 제외
+    # 같은 stem 의 비디오가 존재하는 이미지는 "비디오 썸네일" 로 보고 별도 항목 생성 X
     video_stems = {p.stem for p in files if media_type(p) == "video"}
 
     out = []
@@ -94,17 +94,9 @@ def scan(folder: Path, meta: dict, hobby: str) -> list[dict]:
         mt = media_type(f)
         if mt is None:
             continue
-        # 비디오 썸네일 .jpg 는 스킵 (같은 stem 의 비디오가 있으면)
-        if mt == "image" and f.stem in video_stems and f.suffix.lower() != f.with_suffix(".mp4").suffix.lower():
-            # 이미지가 비디오의 썸네일이면 스킵
-            for vext in VIDEO_EXTS:
-                if f.with_suffix(vext).exists():
-                    break
-            else:
-                # 매칭되는 비디오 없음 → 정상 이미지로 취급
-                pass
-            else:
-                continue
+        # 비디오의 썸네일 이미지는 스킵 (find_thumb 가 비디오 항목에서 참조)
+        if mt == "image" and f.stem in video_stems:
+            continue
 
         m = FNAME_RE.match(f.stem)
         if not m:
