@@ -1,0 +1,51 @@
+{
+  "_comment": "동전/지폐 메타데이터. 키는 '<국가코드>_<년도>_<NN>' (확장자 제외).",
+  "_country_names": {
+    "kr": "대한민국", "jp": "일본", "us": "미국", "gb": "영국",
+    "eu": "유로존", "cn": "중국", "00": "미상"
+  },
+  "items": {
+    "kr_1983_01": {
+      "country": "대한민국",
+      "face_value": "500원",
+      "denomination_type": "coin",
+      "description": "현행 500원 동전 첫 발행",
+      "tags": ["coin", "circulation"]
+    },
+    "jp_2000_01": {
+      "country": "일본",
+      "face_value": "2000円",
+      "denomination_type": "note",
+      "description": "오키나와 정상회담 기념 지폐",
+      "tags": ["note", "commemorative"]
+    },
+    "us_1976_01": {
+      "country": "미국",
+      "face_value": "$2",
+      "denomination_type": "note",
+      "description": "건국 200주년 기념 2달러 지폐",
+      "tags": ["note", "bicentennial"]
+    },
+    "eu_2002_01": {
+      "country": "유로존",
+      "face_value": "€2",
+      "denomination_type": "coin",
+      "description": "그리스 발행 2유로 (에우로파의 납치)",
+      "tags": ["coin", "euro"]
+    },
+    "gb_1971_01": {
+      "country": "영국",
+      "face_value": "50p",
+      "denomination_type": "coin",
+      "description": "십진법 도입 첫 50펜스",
+      "tags": ["coin", "decimalisation"]
+    },
+    "cn_1980_01": {
+      "country": "중국",
+      "face_value": "1角",
+      "denomination_type": "coin",
+      "description": "제3판 인민폐 1자오",
+      "tags": ["coin"]
+    }
+  }
+}

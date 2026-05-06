@@ -1,0 +1,75 @@
+{
+  "_comment": "다이빙 메타데이터. 키는 '<국가코드>_<년도>_<NN>' (확장자 제외, media/diving/ 안의 파일명과 일치).",
+  "_country_names": {
+    "kr": "대한민국", "jp": "일본", "ph": "필리핀", "id": "인도네시아",
+    "th": "태국", "eg": "이집트", "us": "미국", "au": "호주", "00": "미상"
+  },
+  "items": {
+    "ph_2025_01": {
+      "country": "필리핀",
+      "location": "Moalboal",
+      "point": "Pescador Island",
+      "lat": 9.9333,
+      "lng": 123.3833,
+      "date": "2025-03-15",
+      "depth_m": 18,
+      "description": "정어리 떼 사이로 다이빙. 시야 30m+",
+      "tags": ["sardine-run", "deep-blue"]
+    },
+    "ph_2025_02": {
+      "country": "필리핀",
+      "location": "Moalboal",
+      "point": "Panagsama Beach",
+      "lat": 9.9456,
+      "lng": 123.3789,
+      "date": "2025-03-16",
+      "depth_m": 12,
+      "description": "정어리 토네이도",
+      "tags": ["sardine-run"]
+    },
+    "id_2024_01": {
+      "country": "인도네시아",
+      "location": "Amed",
+      "point": "Japanese Wreck",
+      "lat": -8.3389,
+      "lng": 115.6589,
+      "date": "2024-11-02",
+      "depth_m": 22,
+      "description": "일본 침몰선 다이빙",
+      "tags": ["wreck"]
+    },
+    "kr_2024_01": {
+      "country": "대한민국",
+      "location": "Jeju",
+      "point": "Seogwipo Munseom",
+      "lat": 33.2289,
+      "lng": 126.5644,
+      "date": "2024-07-21",
+      "depth_m": 15,
+      "description": "문섬 연산호 군락",
+      "tags": ["soft-coral"]
+    },
+    "eg_2024_01": {
+      "country": "이집트",
+      "location": "Dahab",
+      "point": "Blue Hole",
+      "lat": 28.5722,
+      "lng": 34.5378,
+      "date": "2024-04-10",
+      "depth_m": 30,
+      "description": "블루홀 아치 통과",
+      "tags": ["blue-hole", "personal-best"]
+    },
+    "eg_2024_02": {
+      "country": "이집트",
+      "location": "Dahab",
+      "point": "Lighthouse",
+      "lat": 28.5083,
+      "lng": 34.5169,
+      "date": "2024-04-12",
+      "depth_m": 25,
+      "description": "라이트하우스 트레이닝",
+      "tags": ["training"]
+    }
+  }
+}

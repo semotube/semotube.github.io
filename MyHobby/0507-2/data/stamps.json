@@ -1,0 +1,51 @@
+{
+  "_comment": "우표 메타데이터. 키는 '<국가코드>_<년도>_<NN>' (확장자 제외).",
+  "_country_names": {
+    "kr": "대한민국", "jp": "일본", "us": "미국", "gb": "영국",
+    "fr": "프랑스", "de": "독일", "cn": "중국", "00": "미상"
+  },
+  "items": {
+    "kr_1957_01": {
+      "country": "대한민국",
+      "face_value": "20환",
+      "description": "유네스코 가입 10주년 기념",
+      "tags": ["commemorative"]
+    },
+    "kr_1988_01": {
+      "country": "대한민국",
+      "face_value": "80원",
+      "description": "서울 올림픽 기념",
+      "tags": ["olympics", "sport"]
+    },
+    "jp_1964_01": {
+      "country": "일본",
+      "face_value": "10円",
+      "description": "도쿄 올림픽 기념",
+      "tags": ["olympics"]
+    },
+    "us_1969_01": {
+      "country": "미국",
+      "face_value": "10¢",
+      "description": "아폴로 11호 달 착륙",
+      "tags": ["space"]
+    },
+    "gb_1953_01": {
+      "country": "영국",
+      "face_value": "1½d",
+      "description": "엘리자베스 2세 대관식",
+      "tags": ["royal"]
+    },
+    "fr_1944_01": {
+      "country": "프랑스",
+      "face_value": "1.50F",
+      "description": "마리안느",
+      "tags": ["definitive"]
+    },
+    "de_1972_01": {
+      "country": "독일",
+      "face_value": "25Pf",
+      "description": "뮌헨 올림픽",
+      "tags": ["olympics"]
+    }
+  }
+}

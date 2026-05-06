@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-05-07T00:00:00Z",
+  "hobbies": {
+    "freediving": {
+      "name": "프리다이빙",
+      "name_en": "Freediving",
+      "items": [
+        {
+          "id": "diving_ph_2025_01",
+          "type": "image",
+          "src": "media/diving/ph_2025_01.jpg",
+          "thumb": "media/diving/ph_2025_01.jpg",
+          "country_code": "PH",
+          "country": "필리핀",
+          "year": 2025,
+          "location": "Moalboal",
+          "point": "Pescador Island",
+          "lat": 9.9333,
+          "lng": 123.3833,
+          "date": "2025-03-15",
+          "depth_m": 18,
+          "description": "정어리 떼 사이로 다이빙. 시야 30m+",
+          "tags": ["sardine-run", "deep-blue"]
+        },
+        {
+          "id": "diving_ph_2025_02",
+          "type": "video",
+          "src": "media/diving/ph_2025_02.mp4",
+          "thumb": "media/diving/ph_2025_02.jpg",
+          "country_code": "PH",
+          "country": "필리핀",
+          "year": 2025,
+          "location": "Moalboal",
+          "point": "Panagsama Beach",
+          "lat": 9.9456,
+          "lng": 123.3789,
+          "date": "2025-03-16",
+          "depth_m": 12,
+          "description": "정어리 토네이도",
+          "tags": ["sardine-run"]
+        },
+        {
+          "id": "diving_id_2024_01",
+          "type": "image",
+          "src": "media/diving/id_2024_01.jpg",
+          "thumb": "media/diving/id_2024_01.jpg",
+          "country_code": "ID",
+          "country": "인도네시아",
+          "year": 2024,
+          "location": "Amed",
+          "point": "Japanese Wreck",
+          "lat": -8.3389,
+          "lng": 115.6589,
+          "date": "2024-11-02",
+          "depth_m": 22,
+          "description": "일본 침몰선 다이빙",
+          "tags": ["wreck"]
+        },
+        {
+          "id": "diving_kr_2024_01",
+          "type": "image",
+          "src": "media/diving/kr_2024_01.jpg",
+          "thumb": "media/diving/kr_2024_01.jpg",
+          "country_code": "KR",
+          "country": "대한민국",
+          "year": 2024,
+          "location": "Jeju",
+          "point": "Seogwipo Munseom",
+          "lat": 33.2289,
+          "lng": 126.5644,
+          "date": "2024-07-21",
+          "depth_m": 15,
+          "description": "문섬 연산호 군락",
+          "tags": ["soft-coral"]
+        },
+        {
+          "id": "diving_eg_2024_01",
+          "type": "image",
+          "src": "media/diving/eg_2024_01.jpg",
+          "thumb": "media/diving/eg_2024_01.jpg",
+          "country_code": "EG",
+          "country": "이집트",
+          "year": 2024,
+          "location": "Dahab",
+          "point": "Blue Hole",
+          "lat": 28.5722,
+          "lng": 34.5378,
+          "date": "2024-04-10",
+          "depth_m": 30,
+          "description": "블루홀 아치 통과",
+          "tags": ["blue-hole", "personal-best"]
+        },
+        {
+          "id": "diving_eg_2024_02",
+          "type": "image",
+          "src": "media/diving/eg_2024_02.jpg",
+          "thumb": "media/diving/eg_2024_02.jpg",
+          "country_code": "EG",
+          "country": "이집트",
+          "year": 2024,
+          "location": "Dahab",
+          "point": "Lighthouse",
+          "lat": 28.5083,
+          "lng": 34.5169,
+          "date": "2024-04-12",
+          "depth_m": 25,
+          "description": "라이트하우스 트레이닝",
+          "tags": ["training"]
+        }
+      ]
+    },
+    "stamps": {
+      "name": "우표",
+      "name_en": "Stamps",
+      "items": [
+        {"id": "stamps_kr_1957_01", "type": "image", "src": "media/stamps/kr_1957_01.jpg", "thumb": "media/stamps/kr_1957_01.jpg", "country_code": "KR", "country": "대한민국", "year": 1957, "face_value": "20환", "description": "유네스코 가입 10주년 기념", "tags": ["commemorative"]},
+        {"id": "stamps_kr_1988_01", "type": "image", "src": "media/stamps/kr_1988_01.jpg", "thumb": "media/stamps/kr_1988_01.jpg", "country_code": "KR", "country": "대한민국", "year": 1988, "face_value": "80원", "description": "서울 올림픽 기념", "tags": ["olympics", "sport"]},
+        {"id": "stamps_jp_1964_01", "type": "image", "src": "media/stamps/jp_1964_01.jpg", "thumb": "media/stamps/jp_1964_01.jpg", "country_code": "JP", "country": "일본", "year": 1964, "face_value": "10円", "description": "도쿄 올림픽 기념", "tags": ["olympics"]},
+        {"id": "stamps_us_1969_01", "type": "image", "src": "media/stamps/us_1969_01.jpg", "thumb": "media/stamps/us_1969_01.jpg", "country_code": "US", "country": "미국", "year": 1969, "face_value": "10¢", "description": "아폴로 11호 달 착륙", "tags": ["space"]},
+        {"id": "stamps_gb_1953_01", "type": "image", "src": "media/stamps/gb_1953_01.jpg", "thumb": "media/stamps/gb_1953_01.jpg", "country_code": "GB", "country": "영국", "year": 1953, "face_value": "1½d", "description": "엘리자베스 2세 대관식", "tags": ["royal"]},
+        {"id": "stamps_fr_1944_01", "type": "image", "src": "media/stamps/fr_1944_01.jpg", "thumb": "media/stamps/fr_1944_01.jpg", "country_code": "FR", "country": "프랑스", "year": 1944, "face_value": "1.50F", "description": "마리안느", "tags": ["definitive"]},
+        {"id": "stamps_de_1972_01", "type": "image", "src": "media/stamps/de_1972_01.jpg", "thumb": "media/stamps/de_1972_01.jpg", "country_code": "DE", "country": "독일", "year": 1972, "face_value": "25Pf", "description": "뮌헨 올림픽", "tags": ["olympics"]}
+      ]
+    },
+    "coins": {
+      "name": "돈",
+      "name_en": "Coins & Notes",
+      "items": [
+        {"id": "coins_kr_1983_01", "type": "image", "src": "media/coins/kr_1983_01.jpg", "thumb": "media/coins/kr_1983_01.jpg", "country_code": "KR", "country": "대한민국", "year": 1983, "face_value": "500원", "denomination_type": "coin", "description": "현행 500원 동전 첫 발행", "tags": ["coin"]},
+        {"id": "coins_jp_2000_01", "type": "image", "src": "media/coins/jp_2000_01.jpg", "thumb": "media/coins/jp_2000_01.jpg", "country_code": "JP", "country": "일본", "year": 2000, "face_value": "2000円", "denomination_type": "note", "description": "오키나와 정상회담 기념 지폐", "tags": ["note"]},
+        {"id": "coins_us_1976_01", "type": "image", "src": "media/coins/us_1976_01.jpg", "thumb": "media/coins/us_1976_01.jpg", "country_code": "US", "country": "미국", "year": 1976, "face_value": "$2", "denomination_type": "note", "description": "건국 200주년 기념 2달러 지폐", "tags": ["note"]},
+        {"id": "coins_eu_2002_01", "type": "image", "src": "media/coins/eu_2002_01.jpg", "thumb": "media/coins/eu_2002_01.jpg", "country_code": "EU", "country": "유로존", "year": 2002, "face_value": "€2", "denomination_type": "coin", "description": "그리스 발행 2유로", "tags": ["coin", "euro"]},
+        {"id": "coins_gb_1971_01", "type": "image", "src": "media/coins/gb_1971_01.jpg", "thumb": "media/coins/gb_1971_01.jpg", "country_code": "GB", "country": "영국", "year": 1971, "face_value": "50p", "denomination_type": "coin", "description": "십진법 도입 첫 50펜스", "tags": ["coin"]},
+        {"id": "coins_cn_1980_01", "type": "image", "src": "media/coins/cn_1980_01.jpg", "thumb": "media/coins/cn_1980_01.jpg", "country_code": "CN", "country": "중국", "year": 1980, "face_value": "1角", "denomination_type": "coin", "description": "제3판 인민폐 1자오", "tags": ["coin"]}
+      ]
+    }
+  }
+}
