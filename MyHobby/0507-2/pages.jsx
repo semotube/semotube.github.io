@@ -99,12 +99,12 @@ function FreedivingPage({ data, onItemClick, search, tweaks }) {
 
         <CountryFilter items={filtered} value={country} onChange={setCountry} theme="diving" />
 
-        {tweaks.showMap && (
+        {/* {tweaks.showMap && (
           <DivingMap
             items={countryFiltered.filter(i => i.lat && i.lng)}
             onItemClick={(it) => onItemClick(countryFiltered, countryFiltered.indexOf(it))}
           />
-        )}
+        )} */}
 
         {byCountry.length === 0 ? (
           <DivingEmpty search={search} />
