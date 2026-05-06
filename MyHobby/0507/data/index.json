@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T20:54:57+00:00",
+  "generated_at": "2026-05-06T21:50:29+00:00",
   "hobbies": {
     "freediving": {
       "name": "프리다이빙",
@@ -9,56 +9,7 @@
     "stamps": {
       "name": "우표",
       "name_en": "Stamps",
-      "items": [
-        {
-          "id": "st_korea_2026_ppp_001",
-          "type": "image",
-          "src": "media/stamps/korea/2026_ppp_001.jpg",
-          "thumb": "media/stamps/korea/2026_ppp_001.jpg",
-          "country": "대한민국",
-          "country_code": "KR",
-          "year": 2026,
-          "face_value": "",
-          "description": "",
-          "tags": []
-        },
-        {
-          "id": "st_korea_2026_ppp_002",
-          "type": "image",
-          "src": "media/stamps/korea/2026_ppp_002.jpg",
-          "thumb": "media/stamps/korea/2026_ppp_002.jpg",
-          "country": "대한민국",
-          "country_code": "KR",
-          "year": 2026,
-          "face_value": "",
-          "description": "",
-          "tags": []
-        },
-        {
-          "id": "st_korea_2026_ppp_003",
-          "type": "image",
-          "src": "media/stamps/korea/2026_ppp_003.jpg",
-          "thumb": "media/stamps/korea/2026_ppp_003.jpg",
-          "country": "대한민국",
-          "country_code": "KR",
-          "year": 2026,
-          "face_value": "",
-          "description": "",
-          "tags": []
-        },
-        {
-          "id": "st_korea_2026_민화_001",
-          "type": "image",
-          "src": "media/stamps/korea/2026_민화_001.jpg",
-          "thumb": "media/stamps/korea/2026_민화_001.jpg",
-          "country": "대한민국",
-          "country_code": "KR",
-          "year": 2026,
-          "face_value": "",
-          "description": "",
-          "tags": []
-        }
-      ]
+      "items": []
     },
     "coins": {
       "name": "돈",
