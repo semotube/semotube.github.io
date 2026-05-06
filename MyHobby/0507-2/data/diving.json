@@ -5,7 +5,7 @@
     "th": "태국", "eg": "이집트", "us": "미국", "au": "호주", "00": "미상"
   },
   "items": {
-    "ph_2025_01": {
+    "kr_2026_01": {
       "country": "필리핀",
       "location": "Moalboal",
       "point": "Pescador Island",
@@ -16,7 +16,7 @@
       "description": "정어리 떼 사이로 다이빙. 시야 30m+",
       "tags": ["sardine-run", "deep-blue"]
     },
-    "ph_2025_02": {
+    "kr_2026_02": {
       "country": "필리핀",
       "location": "Moalboal",
       "point": "Panagsama Beach",

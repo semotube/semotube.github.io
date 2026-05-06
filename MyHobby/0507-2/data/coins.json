@@ -5,14 +5,14 @@
     "eu": "유로존", "cn": "중국", "00": "미상"
   },
   "items": {
-    "kr_1983_01": {
+    "kr_2026_01": {
       "country": "대한민국",
       "face_value": "500원",
       "denomination_type": "coin",
       "description": "현행 500원 동전 첫 발행",
       "tags": ["coin", "circulation"]
     },
-    "jp_2000_01": {
+    "kr_2026_02": {
       "country": "일본",
       "face_value": "2000円",
       "denomination_type": "note",

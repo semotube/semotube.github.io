@@ -1,10 +1,50 @@
 {
-  "generated_at": "2026-05-06T22:03:57+00:00",
+  "generated_at": "2026-05-06T23:15:31+00:00",
   "hobbies": {
     "freediving": {
       "name": "프리다이빙",
       "name_en": "Freediving",
-      "items": []
+      "items": [
+        {
+          "id": "diving_kr_2026_01",
+          "type": "image",
+          "src": "media/diving/kr_2026_01.jpg",
+          "thumb": "media/diving/kr_2026_01.jpg",
+          "country_code": "KR",
+          "country": "필리핀",
+          "year": 2026,
+          "tags": [
+            "sardine-run",
+            "deep-blue"
+          ],
+          "description": "정어리 떼 사이로 다이빙. 시야 30m+",
+          "location": "Moalboal",
+          "point": "Pescador Island",
+          "lat": 9.9333,
+          "lng": 123.3833,
+          "date": "2025-03-15",
+          "depth_m": 18
+        },
+        {
+          "id": "diving_kr_2026_02",
+          "type": "image",
+          "src": "media/diving/kr_2026_02.jpg",
+          "thumb": "media/diving/kr_2026_02.jpg",
+          "country_code": "KR",
+          "country": "필리핀",
+          "year": 2026,
+          "tags": [
+            "sardine-run"
+          ],
+          "description": "정어리 토네이도",
+          "location": "Moalboal",
+          "point": "Panagsama Beach",
+          "lat": 9.9456,
+          "lng": 123.3789,
+          "date": "2025-03-16",
+          "depth_m": 12
+        }
+      ]
     },
     "stamps": {
       "name": "우표",
@@ -18,9 +58,11 @@
           "country_code": "KR",
           "country": "대한민국",
           "year": 2026,
-          "tags": [],
-          "description": "",
-          "face_value": ""
+          "tags": [
+            "commemorative"
+          ],
+          "description": "유네스코 가입 10주년 기념",
+          "face_value": "20환"
         },
         {
           "id": "stamps_kr_2026_02",
@@ -30,16 +72,52 @@
           "country_code": "KR",
           "country": "대한민국",
           "year": 2026,
-          "tags": [],
-          "description": "",
-          "face_value": ""
+          "tags": [
+            "olympics",
+            "sport"
+          ],
+          "description": "서울 올림픽 기념",
+          "face_value": "80원"
         }
       ]
     },
     "coins": {
       "name": "돈",
       "name_en": "Coins & Notes",
-      "items": []
+      "items": [
+        {
+          "id": "coins_kr_2026_01",
+          "type": "image",
+          "src": "media/coins/kr_2026_01.jpg",
+          "thumb": "media/coins/kr_2026_01.jpg",
+          "country_code": "KR",
+          "country": "대한민국",
+          "year": 2026,
+          "tags": [
+            "coin",
+            "circulation"
+          ],
+          "description": "현행 500원 동전 첫 발행",
+          "face_value": "500원",
+          "denomination_type": "coin"
+        },
+        {
+          "id": "coins_kr_2026_02",
+          "type": "image",
+          "src": "media/coins/kr_2026_02.jpg",
+          "thumb": "media/coins/kr_2026_02.jpg",
+          "country_code": "KR",
+          "country": "일본",
+          "year": 2026,
+          "tags": [
+            "note",
+            "commemorative"
+          ],
+          "description": "오키나와 정상회담 기념 지폐",
+          "face_value": "2000円",
+          "denomination_type": "note"
+        }
+      ]
     }
   }
 }
