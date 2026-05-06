@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>나의 앨범 · One Breath, One Life</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ["'Pretendard Variable'", "Pretendard", "system-ui", "sans-serif"],
+          serif: ["'Instrument Serif'", "serif"],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root {
+    /* 심해 다크 베이스 — 깊은 청남 */
+    --bg-0: oklch(0.13 0.035 245);
+    --bg-1: oklch(0.18 0.045 240);
+    --accent-1: oklch(0.62 0.16 220);
+    --accent-2: oklch(0.50 0.18 250);
+    --accent-3: oklch(0.58 0.16 195);
+    color-scheme: dark;
+  }
+  html, body { background: var(--bg-0); }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background:
+      radial-gradient(at 14% -10%, oklch(0.28 0.10 220) 0%, transparent 55%),
+      radial-gradient(at 110% 18%, oklch(0.24 0.10 250) 0%, transparent 50%),
+      radial-gradient(at 50% 110%, oklch(0.18 0.07 235) 0%, transparent 55%),
+      var(--bg-0);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+  .custom-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 999px; }
+  .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+  .line-clamp-1 {
+    display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @supports(padding: max(0px)) {
+    body { padding-bottom: env(safe-area-inset-bottom); }
+  }
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="data.js?v=4"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app.jsx?v=4"></script>
+
+<script type="text/babel">
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "blur": 11,
+    "alpha": 0.02,
+    "accent": "abyss"
+  }/*EDITMODE-END*/;
+
+  function Root() {
+    const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+    return (
+      <>
+        <App tweaks={tweaks} setTweak={setTweak} />
+        <TweaksPanel title="Tweaks">
+          <TweakSection label="유리 효과 · Glassmorphism" />
+          <TweakSlider
+            label="블러 강도"
+            min={4} max={40} step={1}
+            value={tweaks.blur}
+            unit="px"
+            onChange={(v) => setTweak('blur', v)}
+          />
+          <TweakSlider
+            label="투명도 ×100"
+            min={2} max={22} step={1}
+            value={Math.round(tweaks.alpha * 100)}
+            onChange={(v) => setTweak('alpha', v / 100)}
+          />
+          <TweakSection label="바다 톤" />
+          <TweakRadio
+            label="액센트"
+            value={tweaks.accent}
+            onChange={(v) => setTweak('accent', v)}
+            options={[
+              { value: 'abyss',    label: '심해' },
+              { value: 'lagoon',   label: '라군' },
+              { value: 'twilight', label: '황혼' },
+              { value: 'aurora',   label: '오로라' },
+            ]}
+          />
+        </TweaksPanel>
+      </>
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<Root />);
+</script>
+
+</body>
+</html>

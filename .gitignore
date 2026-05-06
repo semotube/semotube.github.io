@@ -1,0 +1,8 @@
+# 0507:0305::시작
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Doc directory
+__Doc/
