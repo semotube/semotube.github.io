@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T20:49:13+00:00",
+  "generated_at": "2026-05-06T20:53:02+00:00",
   "hobbies": {
     "freediving": {
       "name": "프리다이빙",
@@ -11,49 +11,49 @@
       "name_en": "Stamps",
       "items": [
         {
-          "id": "st_kr_korea_ppp_001",
+          "id": "st_kr_2026_ppp_001",
           "type": "image",
-          "src": "media/stamps/kr/korea_ppp_001.jpg",
-          "thumb": "media/stamps/kr/korea_ppp_001.jpg",
+          "src": "media/stamps/kr/2026_ppp_001.jpg",
+          "thumb": "media/stamps/kr/2026_ppp_001.jpg",
           "country": "Kr",
           "country_code": "KR",
-          "year": null,
+          "year": 2026,
           "face_value": "",
           "description": "",
           "tags": []
         },
         {
-          "id": "st_kr_korea_ppp_002",
+          "id": "st_kr_2026_ppp_002",
           "type": "image",
-          "src": "media/stamps/kr/korea_ppp_002.jpg",
-          "thumb": "media/stamps/kr/korea_ppp_002.jpg",
+          "src": "media/stamps/kr/2026_ppp_002.jpg",
+          "thumb": "media/stamps/kr/2026_ppp_002.jpg",
           "country": "Kr",
           "country_code": "KR",
-          "year": null,
+          "year": 2026,
           "face_value": "",
           "description": "",
           "tags": []
         },
         {
-          "id": "st_kr_korea_ppp_003",
+          "id": "st_kr_2026_ppp_003",
           "type": "image",
-          "src": "media/stamps/kr/korea_ppp_003.jpg",
-          "thumb": "media/stamps/kr/korea_ppp_003.jpg",
+          "src": "media/stamps/kr/2026_ppp_003.jpg",
+          "thumb": "media/stamps/kr/2026_ppp_003.jpg",
           "country": "Kr",
           "country_code": "KR",
-          "year": null,
+          "year": 2026,
           "face_value": "",
           "description": "",
           "tags": []
         },
         {
-          "id": "st_kr_korea_민화_001",
+          "id": "st_kr_2026_민화_001",
           "type": "image",
-          "src": "media/stamps/kr/korea_민화_001.jpg",
-          "thumb": "media/stamps/kr/korea_민화_001.jpg",
+          "src": "media/stamps/kr/2026_민화_001.jpg",
+          "thumb": "media/stamps/kr/2026_민화_001.jpg",
           "country": "Kr",
           "country_code": "KR",
-          "year": null,
+          "year": 2026,
           "face_value": "",
           "description": "",
           "tags": []
