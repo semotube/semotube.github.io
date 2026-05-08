@@ -53,8 +53,8 @@
         {
           "id": "stamps_kr_2026_01",
           "type": "image",
-          "src": "media/stamps/kr_2026_01.jpg",
-          "thumb": "media/stamps/kr_2026_01.jpg",
+          "src": "media/stamps/kr_2026_00001.jpg",
+          "thumb": "media/stamps/kr_2026_00001.jpg",
           "country_code": "KR",
           "country": "대한민국",
           "year": 2026,
@@ -67,8 +67,8 @@
         {
           "id": "stamps_kr_2026_02",
           "type": "image",
-          "src": "media/stamps/kr_2026_02.jpg",
-          "thumb": "media/stamps/kr_2026_02.jpg",
+          "src": "media/stamps/kr_2026_00002.jpg",
+          "thumb": "media/stamps/kr_2026_00002.jpg",
           "country_code": "KR",
           "country": "대한민국",
           "year": 2026,
