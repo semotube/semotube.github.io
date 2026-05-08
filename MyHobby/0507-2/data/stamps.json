@@ -5,13 +5,13 @@
     "fr": "프랑스", "de": "독일", "cn": "중국", "00": "미상"
   },
   "items": {
-    "kr_2026_01": {
+    "kr_2026_00001": {
       "country": "대한민국",
       "face_value": "20환",
       "description": "유네스코 가입 10주년 기념",
       "tags": ["commemorative"]
     },
-    "kr_2026_02": {
+    "kr_2026_00002": {
       "country": "대한민국",
       "face_value": "80원",
       "description": "서울 올림픽 기념",
