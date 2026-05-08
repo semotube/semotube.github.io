@@ -275,88 +275,36 @@ function DivingMap({ items, onItemClick }) {
 // ═══════════════════════════════════════════════════════════
 //  ✉️  우표
 // ═══════════════════════════════════════════════════════════
-function StampsPage({ data, onItemClick, search, tweaks }) {
-  const items = data?.hobbies?.stamps?.items || [];
-  const filtered = useMemoP(() => filterBySearch(items, search), [items, search]);
-  const [country, setCountry] = useStateP(null);
-  const countryFiltered = country ? filtered.filter(i => i.country === country) : filtered;
 
-  const byCountry = useMemoP(() => {
-    const g = {};
-    for (const it of countryFiltered) {
-      const key = `${it.country_code}|${it.country}`;
-      (g[key] ||= []).push(it);
-    }
-    return Object.entries(g).map(([k, v]) => {
-      const [code, name] = k.split('|');
-      v.sort((a, b) => (a.year || 0) - (b.year || 0));
-      return { code, name, items: v };
-    }).sort((a, b) => a.name.localeCompare(b.name));
-  }, [countryFiltered]);
+const STAMP_FILES = Array.from({ length: 91 }, (_, i) =>
+  `kr_2026_${String(i + 1).padStart(5, '0')}.jpg`
+);
 
+function StampsPage() {
   return (
     <div className="relative min-h-screen" style={{
       background: 'radial-gradient(ellipse at top, #1a140d 0%, #100c08 50%, #060503 100%)',
     }}>
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 pb-20">
+      <div className="relative w-full px-5 sm:px-8 pb-20">
         <PageIntro
           title="우표"
           subtitle="국가별로 정리한 우표 컬렉션. 종이로 보내는 작은 그림."
           theme="stamps"
         />
-
-        <CountryFilter items={filtered} value={country} onChange={setCountry} theme="stamps" />
-
-        {byCountry.length === 0 ? (
-          <StampsEmpty search={search} />
-        ) : (
-          byCountry.map(grp => (
-            <section key={grp.code} className="mb-14">
-              <div className="flex items-baseline gap-3 mb-6 border-b border-amber-200/15 pb-3">
-                <span className="text-2xl">{flagEmoji(grp.code)}</span>
-                <h2 className="text-2xl font-serif text-amber-50 tracking-tight">{grp.name}</h2>
-                <span className="text-[13px] font-mono text-amber-200/50 ml-auto">{grp.items.length}</span>
-              </div>
-              <StampsGrid items={grp.items} all={countryFiltered} onItemClick={onItemClick} layout={tweaks.layout} />
-            </section>
-          ))
-        )}
+        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10 gap-4">
+          {STAMP_FILES.map(file => (
+            <StampCard key={file} file={file} />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
-function StampsGrid({ items, all, onItemClick, layout }) {
-  if (layout === 'list') {
-    return (
-      <div className="border border-amber-200/15 rounded-sm overflow-hidden divide-y divide-amber-200/10">
-        {items.map(it => (
-          <button key={it.id} onClick={() => onItemClick(all, all.indexOf(it))}
-            className="w-full flex items-center gap-4 px-4 py-3 hover:bg-amber-50/[0.04] transition-colors text-left">
-            <div className="w-14 h-16 flex-shrink-0 bg-amber-50/10 overflow-hidden">
-              <img src={it.thumb || it.src} alt="" className="w-full h-full object-cover" onError={e => e.target.style.display='none'}/>
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="text-[13px] font-medium text-amber-200/80 uppercase tracking-wider">{it.year} · {it.face_value}</div>
-              <div className="text-[15px] font-serif text-amber-50 truncate mt-1">{it.description}</div>
-            </div>
-          </button>
-        ))}
-      </div>
-    );
-  }
+function StampCard({ file }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8">
-      {items.map(it => <StampCard key={it.id} item={it} onClick={() => onItemClick(all, all.indexOf(it))} />)}
-    </div>
-  );
-}
-
-function StampCard({ item, onClick }) {
-  const [errored, setErrored] = useStateP(false);
-  return (
-    <button onClick={onClick} className="group relative block w-full">
-      <div className="relative bg-amber-50/95 p-2 transition-transform group-hover:-translate-y-1 group-hover:rotate-[-1deg] duration-300 shadow-xl"
+    <div className="flex flex-col">
+      <div className="relative bg-amber-50/95 p-2 shadow-xl"
         style={{
           maskImage: `radial-gradient(circle 4px at 4px 4px, transparent 3.5px, black 4px)`,
           maskSize: '11px 11px',
@@ -364,47 +312,12 @@ function StampCard({ item, onClick }) {
           WebkitMaskSize: '11px 11px',
         }}>
         <div className="relative aspect-[3/4] border border-stone-800/30 overflow-hidden">
-          {!errored ? (
-            <img src={item.thumb || item.src} alt="" loading="lazy" onError={() => setErrored(true)}
-              className="absolute inset-0 w-full h-full object-cover" />
-          ) : (
-            <StampPlaceholder item={item} />
-          )}
-          <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 bg-stone-900/85 text-amber-50 text-[11px] font-serif font-bold rounded-sm">
-            {item.face_value}
-          </div>
-          <div className="absolute bottom-1.5 left-1.5 text-[10px] font-mono text-stone-900/85 bg-amber-50/85 px-1 rounded-sm">
-            {item.year}
-          </div>
+          <img src={`media/stamps/${file}`} alt={file} loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover" />
         </div>
       </div>
-      <div className="mt-2.5 px-1">
-        <div className="text-[12px] font-medium uppercase tracking-wider text-amber-200/70">
-          {flagEmoji(item.country_code)} {item.country}
-        </div>
-        <div className="text-[14px] font-serif text-amber-50/95 truncate mt-1">{item.description}</div>
-      </div>
-    </button>
-  );
-}
-
-function StampPlaceholder({ item }) {
-  return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 via-amber-50 to-stone-200">
-      <div className="text-stone-700 font-serif italic text-center px-3 leading-tight">
-        <div className="text-[10px] uppercase tracking-wider">{item.country}</div>
-        <div className="text-2xl font-light my-2">{item.face_value}</div>
-        <div className="text-[9px] font-mono">{item.year}</div>
-      </div>
-    </div>
-  );
-}
-
-function StampsEmpty({ search }) {
-  return (
-    <div className="border-2 border-dashed border-amber-200/20 rounded-sm py-20 text-center">
-      <div className="text-amber-200/60 text-[14px] font-serif italic">
-        {search ? `"${search}"에 해당하는 우표가 없습니다` : '아직 등록된 우표가 없습니다'}
+      <div className="mt-1.5 px-0.5">
+        <div className="text-[10px] font-mono text-amber-200/60 truncate">{file}</div>
       </div>
     </div>
   );
