@@ -156,7 +156,7 @@ function HobbyPage({ hobby, files, openLightbox }) {
         </div>
         <div className="text-muted text-[13px] mt-3 font-mono">
           파일명 규칙: <span className="text-ink">국가코드_년도_인덱스.확장자</span>
-          <br/>예: kr_2026_0001.jpg
+          <br/>예: kr_2026_00001.jpg
         </div>
       </div>
     );
