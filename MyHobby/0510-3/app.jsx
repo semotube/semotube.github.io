@@ -29,8 +29,8 @@ const VIDEO_EXTS = new Set(['mp4', 'mov', 'webm', 'm4v']);
 const IMAGE_EXTS = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'avif']);
 
 // ─── 파일명 → 메타 파싱 ─────────────────────────────────
-//  cc_yyyy_nnnn.ext   (cc=2자, yyyy=4자, nnnn=4자)
-const FNAME_RE = /^([a-z0-9]{2})_(\d{4})_(\d{4})\.([a-z0-9]+)$/i;
+//  cc_yyyy_nnnnn.ext   (cc=2자, yyyy=4자, nnnnn=5자)
+const FNAME_RE = /^([a-z0-9]{2})_(\d{4})_(\d{5})\.([a-z0-9]+)$/i;
 
 function parseItem(hobby, filename, thumbsByStem) {
   const m = FNAME_RE.exec(filename);
