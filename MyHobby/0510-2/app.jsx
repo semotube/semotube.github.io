@@ -106,13 +106,14 @@ const DEMO = {
 // ═══════════════════════════════════════════════════════════
 //  헤더 — 다이빙 / 우표 / 화폐 탭
 // ═══════════════════════════════════════════════════════════
-function Header({ route, navigate }) {
+function Header({ route, navigate, counts }) {
   return (
     <header className="sticky top-0 z-30 bg-paper/85 backdrop-blur-xl border-b border-line">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 h-14 sm:h-16 flex items-center">
         <nav className="flex items-center gap-1 sm:gap-2">
           {HOBBIES.map((h, i) => {
             const active = route.page === h.id;
+            const n = counts?.[h.id] ?? 0;
             return (
               <React.Fragment key={h.id}>
                 {i > 0 && <span className="text-line text-lg select-none">/</span>}
@@ -121,7 +122,7 @@ function Header({ route, navigate }) {
                   className={`px-2 sm:px-3 py-1.5 text-[17px] sm:text-[18px] font-semibold tracking-tight rounded-md transition-colors ${
                     active ? 'text-ink' : 'text-muted hover:text-ink2'
                   }`}>
-                  {h.label}
+                  {h.label}<span className={`ml-0.5 text-[12px] sm:text-[13px] font-mono font-medium ${active ? 'text-muted' : 'text-muted/70'}`}>({n})</span>
                 </button>
               </React.Fragment>
             );
@@ -491,6 +492,13 @@ function App() {
     return () => { document.body.style.overflow = ''; };
   }, [lightbox]);
 
+  const counts = useMemo(() => {
+    if (!data) return {};
+    const c = {};
+    for (const h of HOBBIES) c[h.id] = processFiles(h.id, data[h.id] || []).length;
+    return c;
+  }, [data]);
+
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center text-muted text-[14px] font-mono">불러오는 중…</div>
@@ -501,7 +509,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <Header route={route} navigate={navigate} />
+      <Header route={route} navigate={navigate} counts={counts} />
       <main>
         <HobbyPage hobby={route.page} files={files} openLightbox={openLightbox} />
       </main>
